@@ -1,0 +1,46 @@
+using System;
+
+namespace rayel
+{
+    class Program
+    {
+        class Func
+        {
+            public int a, b;
+            public void vivod()
+            {
+                Console.WriteLine("a=" + a);
+                Console.WriteLine("b=" + b);
+            }
+
+            public void izmenenie(int A, int B)
+            {
+                a = A;
+                b = B;
+            }
+
+            public void summa()
+            {
+                Console.WriteLine("Сумма = " + (a + b));
+            }
+            public void MaxNum()
+            {
+                if (a > b) Console.WriteLine("{0} наибольшее число", a);
+
+                else Console.WriteLine("{0} наибольшее число ", b);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Func f = new Func();
+
+            f.a = 15;
+            f.b = 7;
+            f.izmenenie(14, 100);
+            f.MaxNum();
+            f.summa();
+            f.vivod();
+        }
+    }
+}
